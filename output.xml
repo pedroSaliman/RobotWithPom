@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.9.5 on win32)" generated="20220713 13:08:48.444" rpa="false" schemaversion="3">
+<suite id="s1" name="Start" source="C:\Users\LORD TRADE\Desktop\robotproject\start.robot">
+<kw name="Login" type="SETUP">
+<kw name="TestBefore" library="pom">
+<arg>${site}</arg>
+<arg>${browser}</arg>
+<arg>${user}</arg>
+<arg>${pass}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${site}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220713 13:08:48.729" level="INFO">Opening browser 'chrome' to base url 'https://naveenautomationlabs.com/opencart/'.</msg>
+<status status="PASS" starttime="20220713 13:08:48.729" endtime="20220713 13:09:02.619"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220713 13:09:02.620" endtime="20220713 13:09:02.773"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CLICKTOMYACCOUNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220713 13:09:02.774" level="INFO">Clicking element 'css:a[title='My Account'] span[class='hidden-xs hidden-sm hidden-md']'.</msg>
+<status status="PASS" starttime="20220713 13:09:02.773" endtime="20220713 13:09:02.854"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CLICKTOLOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220713 13:09:02.856" level="INFO">Clicking element 'css:a[href='https://naveenautomationlabs.com/opencart/index.php?route=account/login']'.</msg>
+<status status="PASS" starttime="20220713 13:09:02.855" endtime="20220713 13:09:03.361"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGINEMAIL}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220713 13:09:03.363" level="INFO">Typing text 'naveenanimation20@gmail.com' into text field 'css:#input-email'.</msg>
+<status status="PASS" starttime="20220713 13:09:03.362" endtime="20220713 13:09:03.474"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGINPASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220713 13:09:03.474" level="INFO">Typing text '2521997' into text field 'css:#input-password'.</msg>
+<status status="PASS" starttime="20220713 13:09:03.474" endtime="20220713 13:09:03.564"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGINSUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220713 13:09:03.564" level="INFO">Clicking element 'css:input[value='Login']'.</msg>
+<status status="PASS" starttime="20220713 13:09:03.564" endtime="20220713 13:09:04.523"/>
+</kw>
+<status status="PASS" starttime="20220713 13:08:48.728" endtime="20220713 13:09:04.523"/>
+</kw>
+<status status="PASS" starttime="20220713 13:08:48.728" endtime="20220713 13:09:04.523"/>
+</kw>
+<test id="s1-t1" name="Edit Account" line="20">
+<kw name="EditCase">
+<kw name="EditName" library="pom">
+<arg>${name}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ACOUNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220713 13:09:04.526" level="INFO">Clicking element 'css:div[id='account-account'] a:nth-child(2)'.</msg>
+<status status="PASS" starttime="20220713 13:09:04.526" endtime="20220713 13:09:06.020"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${thefname}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220713 13:09:06.021" level="INFO">Typing text 'mohamed' into text field 'xpath://input[@id='input-firstname']'.</msg>
+<status status="PASS" starttime="20220713 13:09:06.021" endtime="20220713 13:09:06.114"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220713 13:09:06.114" level="INFO">Clicking element 'css:input[value='Continue']'.</msg>
+<status status="PASS" starttime="20220713 13:09:06.114" endtime="20220713 13:09:07.143"/>
+</kw>
+<status status="PASS" starttime="20220713 13:09:04.525" endtime="20220713 13:09:07.143"/>
+</kw>
+<status status="PASS" starttime="20220713 13:09:04.525" endtime="20220713 13:09:07.143"/>
+</kw>
+<status status="PASS" starttime="20220713 13:09:04.523" endtime="20220713 13:09:07.144"/>
+</test>
+<test id="s1-t2" name="Edit Password" line="24">
+<kw name="EditPass">
+<kw name="EditThePass" library="pom">
+<arg>${thepassword1}</arg>
+<arg>${thepassword2}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CLICKPASS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220713 13:09:07.147" level="INFO">Clicking element 'css:a:nth-child(3)'.</msg>
+<status status="PASS" starttime="20220713 13:09:07.147" endtime="20220713 13:09:07.691"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${thepass}</arg>
+<arg>${thepass1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220713 13:09:07.692" level="INFO">Typing text '2521997' into text field 'xpath://input[@id='input-password']'.</msg>
+<status status="PASS" starttime="20220713 13:09:07.691" endtime="20220713 13:09:07.774"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${thepass2}</arg>
+<arg>${confirmpass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220713 13:09:07.774" level="INFO">Typing text '2521997' into text field 'xpath://input[@id='input-confirm']'.</msg>
+<status status="PASS" starttime="20220713 13:09:07.774" endtime="20220713 13:09:07.849"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONTpass}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220713 13:09:07.850" level="INFO">Clicking element 'css:input[value='Continue']'.</msg>
+<status status="PASS" starttime="20220713 13:09:07.849" endtime="20220713 13:09:08.689"/>
+</kw>
+<status status="PASS" starttime="20220713 13:09:07.146" endtime="20220713 13:09:08.689"/>
+</kw>
+<status status="PASS" starttime="20220713 13:09:07.146" endtime="20220713 13:09:08.689"/>
+</kw>
+<status status="PASS" starttime="20220713 13:09:07.145" endtime="20220713 13:09:08.690"/>
+</test>
+<kw name="close" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220713 13:09:08.692" endtime="20220713 13:09:11.806"/>
+</kw>
+<status status="PASS" starttime="20220713 13:09:08.691" endtime="20220713 13:09:11.807"/>
+</kw>
+<status status="PASS" starttime="20220713 13:08:48.445" endtime="20220713 13:09:11.807"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Start">Start</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
